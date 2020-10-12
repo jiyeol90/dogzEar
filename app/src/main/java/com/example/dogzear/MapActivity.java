@@ -24,7 +24,7 @@ import java.net.URL;
 
 public class MapActivity extends AppCompatActivity implements MapView.CurrentLocationEventListener, MapView.MapViewEventListener{
 
-    private static final String LOG_TAG = "MainActivity";
+    private static final String LOG_TAG = "MapActivity";
     private MapView mapView;
     private ViewGroup mapViewContainer;
     private static final int GPS_ENABLE_REQUEST_CODE = 2001;

@@ -34,7 +34,7 @@ class GetTransCoord2Thread extends Thread {	// 스레드
 	String getX,getY;	//결과값
 	String gridx,gridy,coordfrom,coordto;
 	Handler handler;	//값 핸들러
-	String key="KakaoAK 2bfedcbe1fc8de5beeeb6f8cd5645849";
+	String key="KakaoAK REST API";
 	String url="https://dapi.kakao.com/v2/local/geo/transcoord.json?";
     String x,y;
 

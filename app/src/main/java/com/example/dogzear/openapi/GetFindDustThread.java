@@ -34,7 +34,7 @@ class GetFindDustThread extends Thread {	//기상청 연결을 위한 스레드
 	boolean tResponse;	//이건 text로 뿌리기위한 플래그
 	String dongName;
 	Handler handler;	//날씨저장 핸들러
-	String Servicekey="ServiceKey=lSkBDzVjlIur4yduZzRuY%2BoTakW7KnyzyuN4dJUOR1xT%2FVf6iqdALQhdCF%2BDFvPSH8SEiT1F7j9hqbg1huPR9g%3D%3D";
+	String Servicekey="ServiceKey=서비스키";
 	String getInfo="http://openapi.airkorea.or.kr/openapi/services/rest/ArpltnInforInqireSvc/";
 	String getStationFindDust="getMsrstnAcctoRltmMesureDnsty?";
 	String searchDate="dataTerm=daily";
