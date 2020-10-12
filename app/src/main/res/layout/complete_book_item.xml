@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/complete_list_item"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/book_cover"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:background="@drawable/btn_blue"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/book_title"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintVertical_weight="7"
+        android:paddingHorizontal="98dp"/>
+
+    <TextView
+        android:id="@+id/book_title"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/book_cover"
+        app:layout_constraintBottom_toTopOf="@+id/book_rating"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_weight="2"
+        android:fontFamily="@font/oneprettynight"
+        android:text="책 제목"
+        android:textStyle="bold"
+        android:gravity="center_vertical"/>
+
+    <RatingBar
+        android:id="@+id/book_rating"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:stepSize="0.5"
+        android:layout_marginBottom="15dp"
+        style="@style/Widget.AppCompat.RatingBar.Small"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_weight="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:gravity="center_vertical"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

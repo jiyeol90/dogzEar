@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:background="#7BA5C9"
+        android:maxWidth="100dp"
+        android:maxHeight="100dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:src="@drawable/book_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/setting_category_first"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:layout_marginTop="20dp"
+        android:text="앱 설정"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/logo"
+        tools:layout_editor_absoluteX="20dp" />
+
+    <Button
+        android:id="@+id/lock_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:switchMinWidth="50dp"
+        android:background="@drawable/btn_blue"
+        android:fontFamily="@font/oneprettynight"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:text="앱 잠금 화면"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/setting_category_first" />
+
+    <Switch
+        android:id="@+id/flash_switch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:switchMinWidth="50dp"
+        android:text="독서등"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lock_button" />
+
+    <Switch
+        android:id="@+id/music_switch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:switchMinWidth="50dp"
+        android:text="집중 음악"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/flash_switch" />
+
+    <Button
+        android:id="@+id/play_btn"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_blue"
+        android:layout_marginTop="20dp"
+        android:text="재생"
+        android:textSize="10dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toStartOf="@+id/pause_btn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/music_switch"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_goneMarginRight="20dp"
+        app:layout_constraintHorizontal_bias="0.8" />
+    <Button
+        android:id="@+id/pause_btn"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_blue"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:text="멈춤"
+        android:textSize="10dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toStartOf="@+id/stop_btn"
+        app:layout_constraintStart_toEndOf="@+id/play_btn"
+        app:layout_constraintTop_toBottomOf="@+id/music_switch" />
+    <Button
+        android:id="@+id/stop_btn"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_blue"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:text="정지"
+        android:textSize="10dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/pause_btn"
+        app:layout_constraintTop_toBottomOf="@+id/music_switch"
+        />
+    <View
+        android:id="@+id/boarderLine"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="20dp"
+        android:layout_centerInParent="true"
+        android:background="#7BA5C9"
+        app:layout_constraintTop_toBottomOf="@id/play_btn"/>
+
+    <TextView
+        android:id="@+id/setting_category_second"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:layout_marginTop="20dp"
+        android:text="데이터 관리"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/boarderLine"
+        tools:layout_editor_absoluteX="20dp" />
+
+    <Switch
+        android:id="@+id/data_delete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:switchMinWidth="50dp"
+        android:text="데이터 초기화"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/setting_category_second" />
+
+    <Button
+        android:id="@+id/delete_all_btn"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_stat_delete"
+        android:layout_marginTop="20dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/data_delete"
+        app:layout_constraintEnd_toStartOf="@+id/delete_cancel_btn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintHorizontal_bias="0.9"/>
+
+    <Button
+        android:id="@+id/delete_cancel_btn"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_stat_delete_cancel"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/data_delete"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/delete_all_btn"/>
+
+    <ProgressBar
+        android:id="@+id/delete_progress"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_margin="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:progress="25"
+        app:layout_constraintTop_toBottomOf="@+id/delete_cancel_btn"/>
+
+    <TextView
+        android:id="@+id/file_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="delete .... 카스테라"
+        android:visibility="gone"
+        android:textSize="10sp"
+        app:layout_constraintTop_toBottomOf="@+id/delete_progress"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_goneMarginTop="30dp"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#7BA5C9"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/book_logo_customize"
+                android:layout_gravity="center" />
+        </androidx.appcompat.widget.Toolbar>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@color/design_default_color_primary_dark"/>
+
+    <Button
+        android:id="@+id/booklet_btn"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="55dp"
+        android:drawableLeft="@drawable/book_image_customize"
+        android:text="책갈피"
+        android:textSize="30dp"
+        android:background="#E9C2BD"
+        android:textStyle="bold"
+        android:fontFamily="@font/oneprettynight"
+        android:src="@drawable/book"
+        />
+
+    <Button
+        android:id="@+id/calendar_btn"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="책 달력"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:background="#DCBD7E"
+        android:fontFamily="@font/oneprettynight"
+        android:drawableRight="@drawable/calendar_image_customize"
+        android:paddingRight="55dp"
+
+        />
+
+    <Button
+        android:id="@+id/chart_btn"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="55dp"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:background="#07B1B6"
+        android:fontFamily="@font/oneprettynight"
+        android:drawableLeft="@drawable/chart_image_customize"
+        android:text="내가 읽은 책"
+        />
+
+    <Button
+        android:id="@+id/camera_btn"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="페이지 메모"
+        android:textStyle="bold"
+        android:background="#B1D7DB"
+        android:textSize="30dp"
+        android:fontFamily="@font/oneprettynight"
+        android:drawableRight="@drawable/camera_image_customize"
+        android:paddingRight="55dp"
+        />
+</LinearLayout>
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:headerLayout="@layout/navi_header"
+        app:menu="@menu/navi_menu" />
+
+</androidx.drawerlayout.widget.DrawerLayout>

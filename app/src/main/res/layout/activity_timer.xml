@@ -1,0 +1,82 @@
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="vertical">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#7BA5C9"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:src="@drawable/book_logo"
+        android:maxWidth="100dp"
+        android:maxHeight="100dp"
+        android:adjustViewBounds="true"
+        />
+
+    <TextView
+        android:id="@+id/ellapse"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="40sp"
+        android:padding="20dp"
+        android:text="00:00:00"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <Button
+            android:id="@+id/btnstart"
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginHorizontal="20dp"
+            android:onClick="mOnClick"
+            android:background="@drawable/btn_blue"
+            android:text="시작"
+            />
+
+        <Button
+            android:id="@+id/btnsplit"
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginHorizontal="20dp"
+            android:onClick="mOnClick"
+            android:text="기록"
+            android:background="@drawable/btn_blue"
+            android:enabled="false"
+            />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:padding="20dp"
+        android:text="중간기록"
+        />
+
+    <TextView
+        android:id="@+id/split"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:padding="20dp"
+        android:textSize="20sp"
+        />
+
+</LinearLayout>
+</androidx.core.widget.NestedScrollView>
+
+

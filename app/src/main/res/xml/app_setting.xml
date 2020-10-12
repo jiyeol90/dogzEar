@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <Preference android:layout="@layout/setting_top">
+
+    </Preference>
+    <PreferenceCategory android:title="앱 설정">
+    <SwitchPreference
+        android:key="lock"
+        android:title="잠금화면"
+        android:summary="앱을 노출시키고 싶지 않을때 사용해봐요">
+
+    </SwitchPreference>
+
+</PreferenceCategory>
+    <PreferenceCategory android:title="독서 도우미">
+        <SwitchPreference
+            android:key="lock"
+            android:title="손전등"
+            android:summary="어두운 곳에서 책을 읽고싶다면">
+
+        </SwitchPreference>
+
+    </PreferenceCategory>
+
+
+
+</PreferenceScreen>
+

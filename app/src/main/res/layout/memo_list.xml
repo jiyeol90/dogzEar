@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <TextView
+        android:id="@+id/book_title"
+        android:layout_width="0dp"
+        app:layout_constraintHorizontal_weight="2"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/memo_content"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        android:padding="5dp"
+        android:layout_margin="10dp"
+        android:text="무지한 스승"
+        android:fontFamily="@font/oneprettynight"
+        android:textStyle="bold"
+        android:gravity="center_horizontal" />
+
+    <TextView
+        android:id="@+id/memo_content"
+        android:layout_width="0dp"
+        app:layout_constraintHorizontal_weight="8"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/book_title"
+        app:layout_constraintRight_toLeftOf="@id/page_number"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:padding="5dp"
+        android:layout_margin="10dp"
+        android:gravity="center_horizontal"
+        android:background="@drawable/edit_text_customize"
+        android:text="보편적 가르침은 세계가 시작되고부터 모든 설명 방법과 함께 실제로 존재한다."
+        android:fontFamily="@font/oneprettynight"
+        android:textStyle="bold"/>
+
+
+    <TextView
+        android:id="@+id/page_number"
+        android:layout_width="0dp"
+        app:layout_constraintHorizontal_weight="2"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/memo_content"
+        android:padding="5dp"
+        android:layout_margin="10dp"
+        android:gravity="center_horizontal"
+        android:text="156 page"
+        android:fontFamily="@font/oneprettynight"
+        android:textStyle="bold" />
+</androidx.constraintlayout.widget.ConstraintLayout>

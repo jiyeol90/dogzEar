@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">DogzEar</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="prompt_email">ID</string>
+    <string name="check_email">중복체크</string>
+    <string name="prompt_password">Password</string>
+    <string name="prompt_password_second">Password 확인</string>
+    <string name="check_sign_in">확인</string>
+    <string name="action_login">Login</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="between_login_signin">OR</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <!--잠금화면 관련 Tag -->
+    <string name="manage_passcode">Manage passcode</string>
+    <string name="enter_passcode">비밀번호를 입력하세요</string>
+    <string name="enter_old_passcode">사용하던 비밀번호를 입력하세요</string>
+    <string name="reenter_passcode">비밀번호를 다시한번 입력하세요</string>
+    <string name="change_passcode">비밀번호 바꾸기</string>
+    <string name="setup_passcode">비밀번호 설정하기</string>
+    <string name="passcode_wrong">잘못된 비밀번호 입니다. 다시 입력하세요.</string>
+    <string name="disable_passcode">비밀번호 해제</string>
+    <string name="enable_passcode">비밀번호 설정</string>
+    <!--대기 오염측정 관련 Tag -->
+    <string name="gpsUse">GPS사용</string>
+    <string name="gpsOn">정확한 위치 측정을 위해 GPS를 켜시겠습니까?</string>
+    <string name="cancel">취소</string>
+</resources>

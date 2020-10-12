@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/signing_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:background="@drawable/background_blur"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/sign_in"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/oneprettynight"
+        android:textStyle="bold"
+        android:textSize="50dp"
+        android:text="회원가입"/>
+
+    <EditText
+        android:id="@+id/et_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="24dp"
+        android:layout_below="@+id/sign_in"
+        android:background="@drawable/edit_text_white"
+        android:padding="10dp"
+        android:hint="@string/prompt_email"
+        android:inputType="textEmailAddress"
+        android:selectAllOnFocus="true" />
+
+    <Button
+        android:id="@+id/check_duplication"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="24dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/et_id"
+        android:background="@drawable/btn_blue"
+        android:fontFamily="@font/oneprettynight"
+        android:textStyle="bold"
+        android:textSize="15dp"
+        android:text="@string/check_email" />
+
+    <EditText
+        android:id="@+id/et_pwd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/edit_text_white"
+        android:layout_below="@+id/check_duplication"
+        android:padding="10dp"
+        android:hint="@string/prompt_password"
+        android:inputType="numberPassword"
+        android:selectAllOnFocus="true" />
+
+    <EditText
+        android:id="@+id/et_pwd_check"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/edit_text_white"
+        android:layout_below="@+id/et_pwd"
+        android:padding="10dp"
+        android:hint="@string/prompt_password_second"
+        android:inputType="numberPassword"
+        android:selectAllOnFocus="true" />
+
+    <TextView
+        android:id="@+id/alarmMsg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et_pwd_check"
+        android:text="비밀번호가 같지 않습니다."
+        android:textColor="@color/colorPrimary"
+        android:layout_marginTop="20dp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        android:layout_centerHorizontal="true"/>
+    <Button
+        android:id="@+id/singIn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="140dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_below="@+id/et_pwd_check"
+        android:background="@drawable/btn_blue"
+        android:fontFamily="@font/oneprettynight"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:text="@string/check_sign_in" />
+
+
+</RelativeLayout>
+

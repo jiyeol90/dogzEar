@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <!--
+        기상청 공공데이터는 http로 만들어져 있는데 안드로이드 9부터 https대신 http를 사용하면 컴파일 시 보안 관련
+        에러가 발생한다. 따라서 아래 코드를 추가하여 http를 사용할 수 있도록 허용한다.
+    -->
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">maps.daum-img.net</domain>
+    </domain-config>
+</network-security-config>

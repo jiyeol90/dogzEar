@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:background="#7BA5C9"
+        android:maxWidth="100dp"
+        android:maxHeight="100dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:src="@drawable/book_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/search_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="60dp"
+        android:layout_marginLeft="15dp"
+        android:adjustViewBounds="true"
+        android:drawablePadding="5dp"
+        android:maxWidth="100dp"
+        android:maxHeight="150dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/camera_image_customize"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo" />
+
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="5dp"
+        android:fontFamily="@font/oneprettynight"
+        android:text="제목 :"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/et_title"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@+id/search_bar"
+        app:layout_constraintTop_toBottomOf="@+id/logo"/>
+
+    <EditText
+        android:id="@+id/et_title"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/oneprettynight"
+        android:hint="책 제목"
+        android:enabled="false"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_title"
+        app:layout_constraintTop_toBottomOf="@+id/logo" />
+
+    <TextView
+        android:id="@+id/tv_author"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="5dp"
+        android:fontFamily="@font/oneprettynight"
+        android:text="저자 :"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/et_author"
+
+        app:layout_constraintStart_toEndOf="@+id/search_bar"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title"/>
+
+    <EditText
+        android:id="@+id/et_author"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:enabled="false"
+        android:fontFamily="@font/oneprettynight"
+        android:hint="저자"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_author"
+        app:layout_constraintTop_toBottomOf="@+id/et_title" />
+
+    <TextView
+        android:id="@+id/tv_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="5dp"
+        android:fontFamily="@font/oneprettynight"
+        android:text="날짜 :"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/et_date"
+        app:layout_constraintStart_toEndOf="@+id/search_bar"
+        app:layout_constraintTop_toBottomOf="@+id/tv_author"></TextView>
+
+    <EditText
+        android:id="@+id/et_date"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/oneprettynight"
+        android:enabled="false"
+        android:focusable="false"
+        android:hint="날짜"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_date"
+        app:layout_constraintTop_toBottomOf="@+id/et_author" />
+
+    <Button
+        android:id="@+id/book_modify_btn"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/btn_blue"
+        android:fontFamily="@font/oneprettynight"
+        android:text="수정"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/delete_btn"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_date" />
+
+    <Button
+        android:id="@+id/delete_btn"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/btn_blue"
+        android:fontFamily="@font/oneprettynight"
+        android:text="삭제"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/book_modify_btn"
+        app:layout_constraintTop_toBottomOf="@+id/et_date" />
+
+    <Button
+        android:id="@+id/complete_btn"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/btn_blue"
+        android:fontFamily="@font/oneprettynight"
+        android:text="독서완료"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/delete_btn"
+        app:layout_constraintTop_toBottomOf="@+id/et_date"
+        app:layout_constraintHorizontal_bias="0.5"/>
+
+    <View
+        android:id="@+id/borderline"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="10dp"
+        android:background="#5BB6E8"
+        app:layout_constraintTop_toBottomOf="@+id/complete_btn"/>
+
+    <ProgressBar
+        android:id="@+id/progress"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="20dp"
+        android:max="100"
+        android:layout_weight="2"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/borderline"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="40sp"
+        android:clickable="true"
+        android:text="00:00:00"
+        app:layout_constraintTop_toBottomOf="@+id/progress"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/memo_insert"
+        app:layout_constraintBottom_toTopOf="@+id/recyclerview_memo_list" />
+
+    <!--
+    <ImageView
+        android:id="@+id/here"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_stat_progress"
+        app:layout_constraintTop_toBottomOf="@+id/borderline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.05"/>
+    -->
+
+
+    <TextView
+        android:id="@+id/zero_page"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0p"
+        app:layout_constraintTop_toBottomOf="@+id/progress"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.05"/>
+
+    <TextView
+        android:id="@+id/total_page"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="289p"
+        app:layout_constraintTop_toBottomOf="@+id/progress"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.68"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/oneprettynight"
+        android:text="독서진행 상태"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/borderline"
+        app:layout_constraintStart_toEndOf="@+id/progress"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <Button
+        android:id="@+id/memo_insert"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_blue"
+        app:layout_constraintHorizontal_bias="0.8"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/recyclerview_memo_list"
+        app:layout_constraintTop_toBottomOf="@+id/progress"
+        android:fontFamily="@font/oneprettynight"
+        android:text="독서진행 추가"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview_memo_list"
+        android:background="@drawable/edit_text_customize"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_margin="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/memo_insert"
+        android:scrollbarFadeDuration="0"
+        android:scrollbarSize="5dp"
+        android:scrollbarThumbVertical="@android:color/darker_gray"
+        android:scrollbars="vertical"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

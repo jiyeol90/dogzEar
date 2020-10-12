@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <external-path
+        name="my_images"
+        path="Android/data/com.example.dogzear/files/Pictures"/>
+    <!--파일의 경로를 명시해주는 파일로 path에 해당하는 값은 추후 'Enviroment.getExternalStorageDirectory()'
+    다음에 사용될 경로 이름이므로 자유롭게 사용하되 카메라 사진을 가져올때 경로 이름과 일치해야한다. -->
+
+</paths>

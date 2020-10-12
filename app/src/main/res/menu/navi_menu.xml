@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/account"
+            android:icon="@drawable/ic_stat_profile"
+            android:title="계정"
+            />
+        <item
+            android:id="@+id/setting"
+            android:icon="@drawable/ic_stat_setting"
+            android:title="설정"
+            />
+
+        <item
+            android:id="@+id/record"
+            android:icon="@drawable/ic_stat_record"
+            android:title="낭독"
+            />
+        <item
+            android:id="@+id/map"
+            android:icon="@drawable/ic_stat_map"
+            android:title="지도"
+            />
+        <item
+            android:id="@+id/climate"
+            android:icon="@drawable/ic_stat_climate"
+            android:title="날씨"
+            />
+        <item
+            android:id="@+id/logout"
+            android:icon="@drawable/ic_stat_logout"
+            android:title="로그아웃"
+            />
+    </group>
+</menu>

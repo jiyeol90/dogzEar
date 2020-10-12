@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="age">
+        <item>나이</item>
+        <item>10대</item>
+        <item>20대</item>
+        <item>30대</item>
+        <item>40대</item>
+        <item>50대</item>
+        <item>60대</item>
+        <item>70대</item>
+        <item>80대</item>
+        <item>90대</item>
+    </string-array>
+
+    <string-array name="genre">
+        <item>장르</item>
+        <item>경제경영</item>
+        <item>사회과학</item>
+        <item>소설/시</item>
+        <item>에세이</item>
+        <item>예술/대중문화</item>
+        <item>역사</item>
+        <item>인문학</item>
+        <item>종교</item>
+        <item>컴퓨터/모바일</item>
+        <item>과학</item>
+    </string-array>
+</resources>
