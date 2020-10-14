@@ -11,17 +11,14 @@ import java.io.InputStream;
 import java.net.URL;
 import java.net.URLEncoder;
 
-/**
+/*
  * 대기정보를 가져오는 스레드
- * 
- * @author Ans
- *
  */
 
-/**
+/*
  * 기상청을 연결하는 스레드
  * 이곳에서 풀파서를 이용하여 기상청에서 정보를 받아와 각각의 array변수에 넣어줌
- * @author Ans
+ *
  */
 class GetStationListThread extends Thread {	//기상청 연결을 위한 스레드
 	static public boolean active=false;
@@ -37,6 +34,7 @@ class GetStationListThread extends Thread {	//기상청 연결을 위한 스레�
 	Handler handler;	//날씨저장 핸들러
 	String stationUrl;
 	String Servicekey="ServiceKey=UjJ7oQLeBZHL5aAaYKFMMcYx74SsBqv9%2B396FGmHcUbhLbZq4va2S%2B5NaK9E0LG%2BlNvHAmkGSjh7pbcQcl3GkA%3D%3D";
+	//측정소정보 조회 서비스 (한국환경공단 에어코리아 OpenAPI 활용가이드 5p.)
 	String getInfo="http://openapi.airkorea.or.kr/openapi/services/rest/MsrstnInfoInqireSvc/";
 	String getStationFindDust="getMsrstnList?";
 	String getNearStationFindDust="getNearbyMsrstnList?";
@@ -141,22 +139,16 @@ class GetStationListThread extends Thread {	//기상청 연결을 위한 스레�
 					}
 					eventType=xpp.next();	//이건 다음 이벤트로~
 				}
-
-
 				
 			}catch(Exception e){
 				e.printStackTrace();
 			}
 		}
-		
-		
-		
+
 	}
 	
-	/**
-	 * 이 부분이 뿌려주는곳 
-	 * 뿌리는건 핸들러가~
-	 * @author Ans
+	/*
+	 * 이 부분이 화면에 뿌려주는곳
 	 */
 	private void view_text(){
 		

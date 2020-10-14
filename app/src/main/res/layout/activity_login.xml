@@ -84,12 +84,20 @@
     </LinearLayout>
 
     <Button
+        android:id="@+id/btn_custom_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/kakao_login_medium_wide"
+        />
+    <Button
         android:id="@+id/login_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="start"
         android:layout_marginStart="48dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="50dp"
         android:layout_marginEnd="48dp"
         android:background="@drawable/btn_dark_blue"
         android:enabled="true"

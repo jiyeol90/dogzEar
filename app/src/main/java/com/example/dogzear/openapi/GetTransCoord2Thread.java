@@ -14,17 +14,17 @@ import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-/**
+/*
  * 변환된 좌표계를 가져오는 스레드
- * 
- * @author Ans
- *
+ * 요청 메시지 명세에  TM_X 좌표와 TM_Y 좌표 값을 요구하고 있다.
+ * TM 좌표에 대한 자세한 정보 => https://woof.tistory.com/4
+ * GPS로 얻어온 WGS84를 TM좌표계로 변환 해야 한다.
  */
 
-/**
+/*
  * 다음API를 연결하는 스레드
  * 이곳에서 풀파서를 이용하여 카카오API에서 정보를 받아와 각각의 array변수에 넣어줌
- * @author Ans
+ *
  */
 class GetTransCoord2Thread extends Thread {	// 스레드
 	static public boolean active=false;
@@ -34,7 +34,7 @@ class GetTransCoord2Thread extends Thread {	// 스레드
 	String getX,getY;	//결과값
 	String gridx,gridy,coordfrom,coordto;
 	Handler handler;	//값 핸들러
-	String key="KakaoAK REST API";
+	String key="KakaoAK 2bfedcbe1fc8de5beeeb6f8cd5645849\n";
 	String url="https://dapi.kakao.com/v2/local/geo/transcoord.json?";
     String x,y;
 
@@ -65,11 +65,7 @@ class GetTransCoord2Thread extends Thread {	// 스레드
 				Log.e("get transcoord",geocode);
 				HttpURLConnection httpCon = (HttpURLConnection)urlCon.openConnection();
 
-
-
 				String json = "";
-
-
 
 				// build jsonObject
 
@@ -78,9 +74,6 @@ class GetTransCoord2Thread extends Thread {	// 스레드
 				// convert JSONObject to JSON to String
 
 				json = jsonObject.toString();
-
-
-
 
 
 				// Set some headers to inform server about the type of the content
@@ -157,15 +150,12 @@ class GetTransCoord2Thread extends Thread {	// 스레드
 			}
 		}
 
-		
-		
-		
 	}
 	
-	/**
-	 * 이 부분이 뿌려주는곳 
+	/*
+	 * 이 부분이 뿌려주는곳
 	 * 뿌리는건 핸들러가~
-	 * @author Ans
+	 *
 	 */
 	private void showtext(){
 		

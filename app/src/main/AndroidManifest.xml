@@ -28,7 +28,7 @@
 
         <meta-data
             android:name="com.kakao.sdk.AppKey"
-            android:value="App key를 입력하시오" />
+            android:value="33dfc4e75c68cbe4dfcfbceec14bcb7c" />
 
         <activity android:name=".MapActivity" />
         <activity android:name=".game.MolegameActivity" />

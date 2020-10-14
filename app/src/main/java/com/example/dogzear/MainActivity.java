@@ -34,6 +34,12 @@ import com.example.dogzear.service.MusicService;
 import com.google.android.material.navigation.NavigationView;
 import com.gun0912.tedpermission.PermissionListener;
 import com.gun0912.tedpermission.TedPermission;
+import com.kakao.auth.ApiErrorCode;
+import com.kakao.auth.Session;
+import com.kakao.network.ErrorResult;
+import com.kakao.usermgmt.UserManagement;
+import com.kakao.usermgmt.callback.LogoutResponseCallback;
+import com.kakao.usermgmt.callback.UnLinkResponseCallback;
 
 import java.util.ArrayList;
 
@@ -58,6 +64,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener, 
 
     Animation rotateAnimation;
 
+    Session session;
     private DrawerLayout drawerLayout;
    // private Context context = this;
 
@@ -370,10 +377,53 @@ public class MainActivity extends BaseActivity implements View.OnClickListener, 
         } else if (id == R.id.logout) {
             Toast.makeText(this, title + ": 로그아웃 시도중", Toast.LENGTH_SHORT).show();
             //Todo 노래가 실행중일땐 로그아웃하면 실행중인 음악을 끈다.
-            stopService(new Intent(getApplicationContext(), MusicService.class));
-            Intent intent = new Intent(this, LoginActivity.class);
-            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-            startActivity(intent);
+            UserManagement.getInstance().requestUnlink(new UnLinkResponseCallback() {
+                @Override
+                public void onFailure(ErrorResult errorResult) { //회원탈퇴 실패 시
+                    int result = errorResult.getErrorCode(); //에러코드 받음
+
+                    if(result == ApiErrorCode.CLIENT_ERROR_CODE) { //클라이언트 에러인 경우 -> 네트워크 오류
+                        Toast.makeText(getApplicationContext(), "네트워크 연결이 불안정합니다. 다시 시도해 주세요.", Toast.LENGTH_SHORT).show();
+                    } else { //클라이언트 에러가 아닌 경우 -> 기타 오류
+                        Toast.makeText(getApplicationContext(), "회원탈퇴에 실패했습니다. 다시 시도해 주세요.", Toast.LENGTH_SHORT).show();
+                    }
+                }
+
+                @Override
+                public void onSessionClosed(ErrorResult errorResult) { //처리 도중 세션이 닫힌 경우
+                    Toast.makeText(getApplicationContext(), "로그인 세션이 닫혔습니다. 다시 로그인해 주세요.", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+                    startActivity(intent);
+                    finish();
+                }
+
+                @Override
+                public void onNotSignedUp() { //가입된 적이 없는 계정에서 탈퇴를 요구하는 경우
+                    Toast.makeText(getApplicationContext(), "가입되지 않은 계정입니다. 다시 로그인해 주세요.", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+                    startActivity(intent);
+                    finish();
+                }
+
+                @Override
+                public void onSuccess(Long result) { //회원탈퇴에 성공한 경우
+                    Toast.makeText(getApplicationContext(), "로그아웃 하였습니다.", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+                    startActivity(intent);
+                    finish();
+                }
+            });
+            //카카오로 로그아웃할시.
+//            session = Session.getCurrentSession();
+//            if(session != null) {
+//                Toast.makeText(MainActivity.this, "아직 세션이 유지 중이다......", Toast.LENGTH_SHORT).show();
+//            }
+            //로그아웃 자체가 되지 않는다.
+
+//            stopService(new Intent(getApplicationContext(), MusicService.class));
+//            Intent intent = new Intent(this, LoginActivity.class);
+//            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+//            startActivity(intent);
         }
 
         return true;

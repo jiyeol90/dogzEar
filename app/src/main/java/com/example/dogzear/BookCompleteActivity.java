@@ -319,7 +319,7 @@ public class BookCompleteActivity extends BaseActivity implements SeekBar.OnSeek
       float spaceForBar = 8f;
       ArrayList<BarEntry> values = new ArrayList<>();
 
-      for (int i = 0; i < count; i++) {
+      for (int i = 0; i < 1; i++) {
           float val = (float) (Math.random() * range);
           values.add(new BarEntry(i * spaceForBar, val,
                   getResources().getDrawable(R.drawable.star)));
